@@ -65,6 +65,12 @@ public:
 
             vel_x = va2;
             obj.set_vel_x(vb2);
+
+            std::cout << "v1 = " << va2 << std::endl;
+            std::cout << "m1 = " << mass << std::endl;
+            std::cout << "v2 = " << vb2 << std::endl;
+            std::cout << "m2 = " << obj.get_mass() << std::endl;
+            std::cout << std::endl;
          }
     }
 };
@@ -89,12 +95,6 @@ int main()
         o1.update(); o2.update();
         o1.render(window); o2.render(window);
         window.display();
-
-        std::cout << "v1 = " << o1.get_vel_x() << std::endl;
-        std::cout << "m1 = " << o1.get_mass() << std::endl;
-        std::cout << std::endl;
-        std::cout << "v2 = " << o2.get_vel_x() << std::endl;
-        std::cout << "m2 = " << o2.get_mass() << std::endl;
     }
 
     return 0;
